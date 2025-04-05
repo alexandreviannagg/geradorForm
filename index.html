@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de formulário</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <div class="container-geral" style="width: 100vw;">
+        <section id="editor" >
+            <div class="titulo-do-form">
+                <form action="k.php" id="fom-titulo">
+                    <fieldset>
+                        <legend>
+                            <h4>Gerar titulo e cor do fondo</h4>
+                        </legend>
+
+                        <div class="campo-geral">
+                            <label for="input-titulo-form" class="titulo-label">Escreva o titulo do formulario</label>
+                            <input type="text" name="titulo" id="input-titulo-form" class="input-style" placeholder="Digite o titulo aqui...">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-tamanho-fonte-titulo-form" class="titulo-label">Informe o tamanho da fonte do titulo</label>
+                            <input type="number" name="fonte" id="input-tamanho-fonte-titulo-form" class="input-style" placeholder="24" value="24" min="24" max="60">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-cor-titulo-form" class="titulo-label">Cor da fonte do titulo</label>
+                            <input type="color" name="cor" id="input-cor-titulo-form" class="input-style" value="#cc84ff">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-cor-fundo-titulo-form" class="titulo-label">Cor do fundo do formulário</label>
+                            <input type="color" name="corfundo" id="input-cor-fundo-titulo-form" class="input-style" value="#36015b">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-cor-borda-form" class="titulo-label">Cor da borda</label>
+                            <input type="color" name="corborda" id="input-cor-borda-form" class="input-style" value="#cc84ff">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-espessura-borda-form" class="titulo-label">Espessura da borda (em px)</label>
+                            <input type="number" name="Espessura" id="input-espessura-borda-form" class="input-style" placeholder="1" min="1" max="10">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-estilo-borda-form" class="titulo-label">Estilo da borda</label>
+                            <select id="input-estilo-borda-form" class="input-style">
+                                <option value="solid">Sólida</option>
+                                <option value="dashed">Tracejada</option>
+                                <option value="dotted">Pontilhada</option>
+                                <option value="double">Dupla</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+
+            <div class="geracao-campo">
+                <form action="k.php" id="form-campo">
+                    <fieldset>
+                        <legend>
+                            <h4>Gerar campo</h4>
+                        </legend>
+
+                        <div class="campo-geral">
+                            <label for="input-selecionar-tipo-campo" class="titulo-label">Selecione um campo</label>
+                            <select name="sselect" id="input-selecionar-tipo-campo" class="input-style">
+                                <option value="op">SELECIONAR</option>
+                                <option value="text">Text</option>
+                                <option value="email">Email</option>
+                                <option value="password">Senha</option>
+                                <option value="tel">Telefone</option>
+                                <option value="date">Data</option>
+                                <option value="number">Numero</option>
+                                <option value="textarea">Descrição</option>
+                                <option value="select">Select</option>
+                                <option value="submit">Botão</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-titulo-label-campo" class="titulo-label label-display-tiulo">Informe o titulo do campo</label>
+                            <input type="text" name="title" id="input-titulo-label-campo" class="input-style label-display-tiulo" placeholder="Informe aqui..">
+                        </div>
+
+
+
+                        <div class="campo-geral">
+                            <label for="input-tamanho-fonte-label" class="titulo-label label-display">Tamanho da fonte do label (em px)</label>
+                            <input type="number" name="fonte" id="input-tamanho-fonte-label" class="input-style label-display" placeholder="16" min="16" max="30">
+                        </div>
+
+
+
+
+
+                        <div class="campo-geral">
+                            <label for="input-cor-titulo-label-campo" class="titulo-label cor-label-display">Selecione a cor do titulo do campo</label>
+                            <input type="color" name="cor" id="input-cor-titulo-label-campo" class="input-style cor-label-display" value="#FFFFFF">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-placeholder-label-campo" class="titulo-label placeholder-display">Informe o placeholder do campo</label>
+                            <input type="text" name="placeholder" id="input-placeholder-label-campo" class="input-style placeholder-display" placeholder="Informe o placeholder...">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-tamanho-fonte-placeholder" class="titulo-label placeholder-display">Tamanho da fonte do placeholder (em px)</label>
+                            <input type="number" name="fonte-place" id="input-tamanho-fonte-placeholder" class="input-style placeholder-display" placeholder="12" min="12" max="18">
+                        </div>
+
+
+                        <div class="campo-geral">
+                            <label for="input-cor-borda-campo" class="titulo-label">Cor da borda do campo</label>
+                            <input type="color" name="corborda" id="input-cor-borda-campo" class="input-style" value="#cc84ff">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-espessura-borda-campo" class="titulo-label">Espessura da borda (em px)</label>
+                            <input type="number" name="Espessura" id="input-espessura-borda-campo" class="input-style" placeholder="1" min="1" max="4">
+                        </div>
+
+                        <div class="campo-geral">
+                            <label for="input-estilo-borda-campo" class="titulo-label">Estilo da borda</label>
+                            <select id="input-estilo-borda-campo" class="input-style">
+                                <option value="solid">Sólida</option>
+                                <option value="dashed">Tracejada</option>
+                                <option value="dotted">Pontilhada</option>
+                                <option value="double">Dupla</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-geral">
+                            <button id="gerar-campo-botao" class="input-style botao-style">Gerar campo</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section id="criado" >
+            <h4 id="titulo-form-gerado"></h4>
+            <div id="form-gerado">
+                <form action="fs.php" id="formulario"></form>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
