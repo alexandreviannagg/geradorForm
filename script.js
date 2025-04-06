@@ -197,35 +197,32 @@ function adicionarCampo(e) {
         divBotoes.style.cssText = "display:flex; justify-content: space-evenly; margin-top: 10px;"
 
 
-        // Criando uma opção inicial
+        
         let option = document.createElement('option');
         option.textContent = "Selecione uma opção";
         option.value = "selecione";
         input.appendChild(option);
     
-        // Criando o campo de input para nova opção
+        
         let campoParaOpcao = document.createElement("input");
         campoParaOpcao.setAttribute('type', 'text');
         campoParaOpcao.setAttribute('placeholder', 'Inserir o nome da sua opção');
+
         
-        // Botão para adicionar a nova opção
         let botaoInserir = document.createElement("button");
         botaoInserir.className = 'excluir-salvar';
         botaoInserir.textContent = "✓";
         botaoInserir.onclick = function (e) {
-            e.preventDefault(); // Evita o comportamento padrão do botão
+            e.preventDefault(); 
     
-            // Verifica se o campo de entrada para a opção não está vazio
             if (campoParaOpcao.value.trim() !== "") {
-                // Cria uma nova opção para o select
                 let novaOption = document.createElement("option");
                 novaOption.textContent = campoParaOpcao.value;
-                novaOption.value = campoParaOpcao.value.toLowerCase().replace(/\s+/g, '-'); // Normalizando o valor da opção
+                novaOption.value = campoParaOpcao.value.toLowerCase().replace(/\s+/g, '-'); 
     
-                // Adiciona a nova opção ao select
+                
                 input.appendChild(novaOption);
     
-                // Limpa o campo de entrada para nova opção
                 campoParaOpcao.value = "";
             } else {
                 alert("Por favor, insira um nome para a opção.");
@@ -243,7 +240,6 @@ function adicionarCampo(e) {
             return;
         };
     
-        // Adiciona o campo de input e o botão ao campo do formulário
         campoFormulario.appendChild(campoParaOpcao);
         divBotoes.appendChild(botaoInserir);
         divBotoes.appendChild(pararInserir);
